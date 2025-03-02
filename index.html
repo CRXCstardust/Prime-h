@@ -3,12 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
-    <script>
-        window.location.href = "https://crxcs.blogspot.com/p/sport-live-stardust.html?link=https://crichype.fun/p3/?id%3DPrimeHindi&m=1";
-    </script>
+    <title>Animated Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1e1e;
+            font-family: Arial, sans-serif;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        .animated-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        }
+        .animated-button::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 10%, rgba(255,255,255,0) 50%);
+            transform: scale(0);
+            transition: transform 0.4s;
+        }
+        .animated-button:hover::before {
+            transform: scale(1);
+        }
+        .animated-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 75, 43, 0.8);
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected, <a href="https://crxcstardust.github.io/Sport-18/">click here</a>.</p>
+    <div class="button-container">
+        <a href="https://crxcstardust.github.io/Prime-hin/" target="_blank">
+            <button class="animated-button">Watch Prime Hindi</button>
+        </a>
+        <a href="https://crxcstardust.github.io/Prime-english/" target="_blank">
+            <button class="animated-button">Watch Prime English</button>
+        </a>
+    </div>
 </body>
 </html>
